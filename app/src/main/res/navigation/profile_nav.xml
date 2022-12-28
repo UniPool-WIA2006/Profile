@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/profile_nav"
+    app:startDestination="@id/profile_page_1">
+
+    <fragment
+        android:id="@+id/profile_page_1"
+        android:name="com.example.profile.profile_page_1"
+        android:label="fragment_profile_page_1"
+        tools:layout="@layout/fragment_profile_page_1" >
+        <action
+            android:id="@+id/action_profile_page_1_to_edit_profile"
+            app:destination="@id/edit_profile" />
+        <action
+            android:id="@+id/action_profile_page_1_to_register_as_a_driver"
+            app:destination="@id/register_as_a_driver" />
+    </fragment>
+    <fragment
+        android:id="@+id/edit_profile"
+        android:name="com.example.profile.edit_profile"
+        android:label="fragment_edit_profile"
+        tools:layout="@layout/fragment_edit_profile" >
+        <action
+            android:id="@+id/action_edit_profile_to_change_password"
+            app:destination="@id/change_password" />
+    </fragment>
+    <fragment
+        android:id="@+id/change_password"
+        android:name="com.example.profile.change_password"
+        android:label="fragment_change_password"
+        tools:layout="@layout/fragment_change_password" />
+    <fragment
+        android:id="@+id/register_as_a_driver"
+        android:name="com.example.profile.register_as_a_driver"
+        android:label="fragment_register_as_a_driver"
+        tools:layout="@layout/fragment_register_as_a_driver" >
+        <action
+            android:id="@+id/action_register_as_a_driver_to_profile_page_2"
+            app:destination="@id/profile_page_2" />
+    </fragment>
+    <fragment
+        android:id="@+id/profile_page_2"
+        android:name="com.example.profile.profile_page_2"
+        android:label="fragment_profile_page_2"
+        tools:layout="@layout/fragment_profile_page_2" >
+        <action
+            android:id="@+id/action_profile_page_2_to_edit_profile"
+            app:destination="@id/edit_profile" />
+        <action
+            android:id="@+id/action_profile_page_2_to_update_car_info"
+            app:destination="@id/update_car_info" />
+    </fragment>
+    <fragment
+        android:id="@+id/update_car_info"
+        android:name="com.example.profile.update_car_info"
+        android:label="fragment_update_car_info"
+        tools:layout="@layout/fragment_update_car_info" />
+</navigation>
